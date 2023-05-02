@@ -1,7 +1,7 @@
 /**
-* Template Name: Flexor
+* Template Name: Reveal
 * Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
+* Template URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -160,10 +160,16 @@
   });
 
   /**
-   * Initiate glightbox 
+   * Clients Slider
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
+  new Swiper('.hero-slider', {
+    speed: 1000,
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    }
   });
 
   /**
@@ -185,38 +191,20 @@
     breakpoints: {
       320: {
         slidesPerView: 2,
-        spaceBetween: 40
+        spaceBetween: 20
       },
       480: {
         slidesPerView: 3,
-        spaceBetween: 60
+        spaceBetween: 20
       },
       640: {
         slidesPerView: 4,
-        spaceBetween: 80
+        spaceBetween: 20
       },
       992: {
         slidesPerView: 6,
-        spaceBetween: 120
+        spaceBetween: 20
       }
-    }
-  });
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
     }
   });
 
@@ -272,6 +260,35 @@
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
+    }
+  });
+
+  /**
+   * Testimonials slider
+   */
+  new Swiper('.testimonials-slider', {
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
     }
   });
 
