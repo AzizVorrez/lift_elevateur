@@ -7,20 +7,17 @@
   <section id="hero">
 
     <div class="hero-content" data-aos="fade-up">
-      <h2>Making <span>your ideas</span><br>happen!</h2>
+      {% if commune_actif.lib_comm %}
+      <h2>Location Lift <span>{{ commune_actif.lib_comm }}</span><br> et ses environs !</h2>
+      {% elif city_actif.lib_city %}
+      <h2>Location Lift <span>{{ city_actif.lib_city }}</span><br> et ses environs !</h2>
+      {% else %}
+      <h2>Location Lift <span></span><br> Partout à Bruxelles</h2>
+      {% endif %}
+      
       <div>
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="#portfolio" class="btn-projects scrollto">Our Projects</a>
-      </div>
-    </div>
-
-    <div class="hero-slider swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image: url('assets/img/hero-carousel/1.jpg');"></div>
-        <div class="swiper-slide" style="background-image: url('assets/img/hero-carousel/2.jpg');"></div>
-        <div class="swiper-slide" style="background-image: url('assets/img/hero-carousel/3.jpg');"></div>
-        <div class="swiper-slide" style="background-image: url('assets/img/hero-carousel/4.jpg');"></div>
-        <div class="swiper-slide" style="background-image: url('assets/img/hero-carousel/5.jpg');"></div>
+        <a class="btn-get-started" href="mailto:demenagement@master-lift.com">demenagement@master-lift.com</a>
+        <a class="btn-projects" href="tel:+155895548855">+32 485 712 752</a>
       </div>
     </div>
 
@@ -37,13 +34,15 @@
           </div>
 
           <div class="col-lg-6 content">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            <h2>Pourquoi nous choisir pour votre déménagement ?</h2>
+            <p>
+              Nous offrons un équipement professionnel qui vous permettra de transporter vos biens en hauteur sans effort et en toute sécurité. Notre équipe expérimentée s'occupera de la livraison, de l'installation et de la mise en service du lift pour vous garantir une utilisation optimale de notre équipement.
+            </p>
 
             <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bi bi-check-circle"></i> Vous êtes dans le besoin de location de lift ? Contactez nous maintant.</li>
+              <li><i class="bi bi-check-circle"></i> Pour les communes et régions qui suive uniquement sur devis ou par téléphone.</li>
+              <li><i class="bi bi-check-circle"></i> Pour les communes et régions qui suive uniquement sur devis ou par téléphone.</li>
             </ul>
 
           </div>
@@ -56,8 +55,14 @@
     <section id="services">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Services</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <h2>Service location lift élévateur {{ commune_actif.lib_comm }} {{ city_actif.lib_city }}</h2>
+          <p>Depuis plus de 20 ans, notre entreprise se spécialise dans la location d'élévateurs <a href="https://www.lift-charleroi.be/">(lifts de déménagement)</a> avec opérateur pour les particuliers, les entreprises et les institutions de Bruxelles et du Brabant Wallon.
+
+            <br><br> Nous fournissons des élévateurs pour des durées allant d'une heure ou plus, permettant de monter et/ou descendre divers mobiliers et matériaux, du premier au vingt-deuxième étage, jusqu'à une charge maximale de +/- 300 kg. Lorsque les escaliers sont trop raides ou que les portes intérieures sont trop étroites, il est préférable de faire appel à des professionnels, et nos élévateurs rendent tout cela possible.
+            
+            <br><br>Nous disposons de plusieurs types de véhicules, notamment des camions élévateurs pouvant monter jusqu'au vingt-deuxième étage et des élévateurs standards jusqu'au dixième étage.
+            
+            <br><br>Pour les accès difficiles, nous utilisons des élévateurs tractables et/ou électriques (Geda). Faites confiance à notre expertise pour faciliter vos déménagements en toute sécurité.</p>
         </div>
 
         <div class="row gy-4">
@@ -65,32 +70,33 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
               <div class="icon"><i class="bi bi-briefcase"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.</p>
+              <h4 class="title"><a href="">Location pas cher</a></h4>
+              <p class="description">Nous proposons des tarifs compétitifs pour tous nos services de location de lift avec opérateur, afin que vous puissiez bénéficier d'une location à un prix abordable.</p>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="box">
               <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata nodera clas.</p>
+              <h4 class="title"><a href="">Satisfaction client</a></h4>
+              <p class="description">Chez nous, l'efficacité de l'expérience client est notre priorité absolue. Nous sommes conscients que le transport de vos biens en hauteur peut être stressant et nous voulons faire en sorte que cette étape soit aussi facile et agréable que possible.</p>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="box">
               <div class="icon"><i class="bi bi-bar-chart"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur trinige zareta lobur trade.</p>
+              <h4 class="title"><a href="">Assistance 7J/7 et H24</a></h4>
+              <p class="description">Nous sommes à votre disposition 7j/7 pour répondre à toutes vos demandes et pour vous aider à organiser votre <a href="https://www.lift-charleroi.be/">déménagement</a> en toute sérénité. Nous mettons à votre disposition des élévateurs adaptés à tous les types de bâtiments et d'appartements, des camions de déménagement et des fourgons pour assurer un transport sécurisé de vos biens.</p>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="box">
               <div class="icon"><i class="bi bi-binoculars"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum rideta zanox satirente madera</p>
+              <h4 class="title"><a href="">Meilleure expérience</a></h4>
+              <p class="description">Nous sommes convaincus que notre expérience et notre professionnalisme sont les garants de votre satisfaction. Nous sommes à l'écoute de vos besoins et de vos attentes pour vous offrir des prestations de qualité au prix le plus juste.
+              </p>
             </div>
           </div>
 
@@ -103,22 +109,12 @@
     <section id="clients">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Clients</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
-        </div>
+          <h2>Location de lift Élévateur {{ commune_actif.lib_comm }} {{ city_actif.lib_city }}</h2>
+          <p>Lift pas cher est l'expert de confiance pour tous vos besoins en monte-charge et lift élévateur monte-meubles depuis plus de 20 ans. Nous fournissons des services complets pour les professionnels, les particuliers, les entreprises et les institutions, et avons une solide expérience avec une variété de clients, y compris des magasins, des cuisinistes, des vendeurs de mobiliers et des professionnels en bâtiment.
 
-        <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src={% static "img/clients/client-1.png" %} %} %} %} %} class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src={% static "img/clients/client-2.png" %} %} %} %} %} class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src={% static "img/clients/client-3.png" %} %} %} %} %} class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src={% static "img/clients/client-4.png" %} %} %} %} %} class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src={% static "img/clients/client-5.png" %} %} %} %} %} class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src={% static "img/clients/client-6.png" %} %} %} %} %} class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src={% static "img/clients/client-7.png" %} %} %} %} %} class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src={% static "img/clients/client-8.png" %} %} %} %} %} class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
+            <br><br> Nous sommes déterminés à rendre votre déménagement rapide, sûr et efficace, et ce, à un prix abordable. En plus de déménager vos biens précieux, nous pouvons également assurer leur transport. Nous offrons également la location de camionnettes ou de camions (permis de conduire B) pour vos besoins de transport supplémentaires. Chez Lift pas cher, nous sommes là pour vous aider à louer le lift élévateur monte-meuble adapté à vos besoins. Nous sommes là pour vous conseiller et pour vous aider à planifier votre déménagement dans les moindres détails, y compris la réservation d'un emplacement de stationnement devant votre adresse de déménagement.
+            
+            <br><br> Nous savons que le temps est précieux lors d'un déménagement, c'est pourquoi nous sommes toujours là pour vous aider à optimiser votre temps et pour vous assurer que votre déménagement se déroule en toute sécurité et efficacement. Chez Lift pas cher, nous sommes fiers de notre expertise et de notre service à la clientèle exceptionnel, et nous sommes prêts à vous aider à chaque étape de votre projet de déménagement.</p>
         </div>
 
       </div>
@@ -128,124 +124,85 @@
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Our Portfolio</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <h2>Nos zones d'interventions</h2>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              
+              {% for commune in communes %}
+              <a href='/{{ commune.id }}'><li data-filter="*" class="filter-active">{{ commune.lib_comm }}</li></a>
+              {% endfor %}
+              
             </ul>
           </div>
         </div>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+      </div>
+    </section>
+    
+    <!-- End Portfolio Section -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src={% static "img/portfolio/portfolio-1.jpg" %} class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href={% static "img/portfolio/portfolio-1.jpg" %} data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
+    {% if cities %}
+    
+    <!-- ======= Villes ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Nos villes d'interventions dans {{ commune_actif.lib_comm }}</h2>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              
+              {% for city in cities %}
+              <a href='/{{ city.lib_city }}'><li data-filter="*" class="filter-active">{{ city.lib_city }}</li></a>
+              {% endfor %}
+              
+            </ul>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src={% static "img/portfolio/portfolio-2.jpg" %} class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href={% static "img/portfolio/portfolio-2.jpg" %} data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src={% static "img/portfolio/portfolio-3.jpg" %} class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href={% static "img/portfolio/portfolio-3.jpg" %} data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src={% static "img/portfolio/portfolio-4.jpg" %} class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href={% static "img/portfolio/portfolio-4.jpg" %} data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src={% static "img/portfolio/portfolio-5.jpg" %} class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href={% static "img/portfolio/portfolio-5.jpg" %} data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src={% static "img/portfolio/portfolio-6.jpg" %} class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href={% static "img/portfolio/portfolio-6.jpg" %} data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src={% static "img/portfolio/portfolio-7.jpg" %} class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href={% static "img/portfolio/portfolio-7.jpg" %} data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src={% static "img/portfolio/portfolio-8.jpg" %} class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href={% static "img/portfolio/portfolio-8.jpg" %} data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src={% static "img/portfolio/portfolio-9.jpg" %} class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href={% static "img/portfolio/portfolio-9.jpg" %} data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>
+    
+    <!-- Fin villes -->
+
+    {% endif %}
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 about-img">
+            <img src={% static "img/about-img.jpg" %} alt="">
+          </div>
+
+          <div class="col-lg-6 content">
+            <h2>Nous organisons votre déménagement</h2>
+            <p>
+              Vous êtes à la recherche d'un service de location de lift élévateur monte-meubles pas cher pour faciliter votre déménagement ? Lift pas cher est votre partenaire idéal. Nous proposons des solutions de qualité pour toutes vos demandes, que vous soyez un particulier, une entreprise, une institution ou un professionnel de l'immobilier.
+
+            <br><br>Nous disposons d'une large gamme d'élévateurs monte-meubles pour répondre à tous vos besoins. Nous proposons des services de location d'élévateurs avec opérateur pour une utilisation efficace et en toute sécurité. Nos opérateurs sont expérimentés et formés pour assurer une utilisation optimale de nos équipements.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </section><br><!-- End About Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Testimonials</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <h2>Ils nous font confiance</h2>
+          <p>
+
+          </p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -254,65 +211,39 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  <img src={% static "img/quote-sign-left.png" %} %} %} %} %} class="quote-sign-left" alt="">
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <img src={% static "img/quote-sign-right.png" %} %} %} %} %} class="quote-sign-right" alt="">
+                  <img src={% static "img/quote-sign-left.png" %} class="quote-sign-left" alt="">
+                  Très satisfait du travail effectué. Vos hommes sont à l’écoute et nous ont donné de très précieux conseils. Travaille simple, rapide, efficace
+                  <img src={% static "img/quote-sign-right.png" %} class="quote-sign-right" alt="">
                 </p>
                 <img src={% static "img/testimonial-1.jpg" %} class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <h3>Sébastien</h3>
+                <h4>Cliente </h4>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  <img src={% static "img/quote-sign-left.png" %} %} %} %} %} class="quote-sign-left" alt="">
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <img src={% static "img/quote-sign-right.png" %} %} %} %} %} class="quote-sign-right" alt="">
+                  <img src={% static "img/quote-sign-left.png" %} class="quote-sign-left" alt="">
+                  Je conseille cette entreprise de déménagement à tout le monde. Ils font du super travaille, effectué avec le sourire et dans les temps.
+                  <img src={% static "img/quote-sign-right.png" %} class="quote-sign-right" alt="">
                 </p>
                 <img src={% static "img/testimonial-2.jpg" %} class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <h3>Sébastien</h3>
+                <h4>Client</h4>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  <img src={% static "img/quote-sign-left.png" %} %} %} %} %} class="quote-sign-left" alt="">
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <img src={% static "img/quote-sign-right.png" %} %} %} %} %} class="quote-sign-right" alt="">
+                  <img src={% static "img/quote-sign-left.png" %} class="quote-sign-left" alt="">
+                  Merci pour votre service, mon déménagement sait dérouler à merveille. Je trouve que vous-avez une équipe formidable, très professionnelles.
+                  <img src={% static "img/quote-sign-right.png" %} class="quote-sign-right" alt="">
                 </p>
                 <img src={% static "img/testimonial-3.jpg" %} class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <img src={% static "img/quote-sign-left.png" %} %} %} %} %} class="quote-sign-left" alt="">
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <img src={% static "img/quote-sign-right.png" %} %} %} %} %} class="quote-sign-right" alt="">
-                </p>
-                <img src={% static "img/testimonial-4.jpg" %} class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <img src={% static "img/quote-sign-left.png" %} %} %} %} %} class="quote-sign-left" alt="">
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <img src={% static "img/quote-sign-right.png" %} %} %} %} %} class="quote-sign-right" alt="">
-                </p>
-                <img src={% static "img/testimonial-5.jpg" %} class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <h3>Valerie</h3>
+                <h4>Client</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -328,97 +259,46 @@
       <div class="container" data-aos="zoom-out">
         <div class="row">
           <div class="col-lg-9 text-center text-lg-start">
-            <h3 class="cta-title">Call To Action</h3>
-            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3 class="cta-title">Réserver votre location de lift pour {{ commune_actif.lib_comm }} {{ city_actif.lib_city }} maintenant</h3>
+            <p class="cta-text"> Nous sommes à votre disposition 7j/7 pour répondre à toutes vos demandes et pour vous aider à organiser votre déménagement en toute sérénité.</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn align-middle" href="#">APPELEZ-NOUS</a>
           </div>
         </div>
       </div>
     </section><!-- End Call To Action Section -->
 
-    <!-- ======= Team Section ======= -->
-    <section id="team">
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Our Team</h2>
+          <h2>Mots clés</h2>
         </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src={% static "img/team-1.jpg" %} alt=""></div>
-              <div class="details">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src={% static "img/team-2.jpg" %} alt=""></div>
-              <div class="details">
-                <h4>Sarah Jhinson</h4>
-                <span>Product Manager</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src={% static "img/team-3.jpg" %} alt=""></div>
-              <div class="details">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src={% static "img/team-4.jpg" %} alt=""></div>
-              <div class="details">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              
+              {% for keyword in keywords %}
+              <a href='/{{ commune.id }}'><li data-filter="*" class="filter-active">{{ keyword.keywords }}</li></a>
+              {% endfor %}
+              
+            </ul>
           </div>
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section>
+    
+    <!-- End Portfolio Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Contact Us</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <h2>Nous contacter</h2>
+          <p>Nous sommes à votre disposition 7j/7 pour répondre à toutes vos demandes et pour vous aider à organiser votre déménagement en toute sérénité.</p>
         </div>
 
         <div class="row contact-info">
@@ -426,16 +306,16 @@
           <div class="col-md-4">
             <div class="contact-address">
               <i class="bi bi-geo-alt"></i>
-              <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <h3>Adresse</h3>
+              <address>16 Kievitenlaan 1702 Dilbeek, Belgique</address>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="bi bi-phone"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <h3>Numéro de téléphone</h3>
+              <p><a href="tel:+155895548855">+32 485 712 752</a></p>
             </div>
           </div>
 
@@ -443,7 +323,7 @@
             <div class="contact-email">
               <i class="bi bi-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:demenagement@master-lift.com">demenagement@master-lift.com</a></p>
             </div>
           </div>
 
@@ -459,26 +339,26 @@
           <form action="forms/contact.php" method="post" role="form" class="php-email-form">
             <div class="row">
               <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Votre nom" required>
               </div>
               <div class="form-group col-md-6 mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Votre email" required>
               </div>
             </div>
             <div class="form-group mt-3">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Objet" required>
             </div>
             <div class="form-group mt-3">
               <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
             </div>
 
             <div class="my-3">
-              <div class="loading">Loading</div>
+              <div class="loading">Chargement</div>
               <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
+              <div class="sent-message">Votre message a été bien envoyé ! Merci</div>
             </div>
 
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            <div class="text-center"><button type="submit">ENVOYER</button></div>
           </form>
         </div>
 
