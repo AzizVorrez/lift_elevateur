@@ -2,8 +2,11 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/anan7947/repositories/lift_elevateur
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp style.css $DEPLOYPATH
+    - /usr/local/cpanel/3rdparty/bin/git pull origin master
+    - /usr/local/cpanel/3rdparty/bin/git checkout -f master
+    - /usr/local/cpanel/3rdparty/bin/git submodule update --init --recursive
+    - /usr/local/cpanel/3rdparty/bin/git clean -f -d
+    - /usr/local/cpanel/3rdparty/bin/git reset --hard HEAD
 
 askip_files:
     - __pycache__/passenger_wsgi.cpython-39.pyc
