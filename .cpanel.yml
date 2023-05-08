@@ -1,8 +1,5 @@
 ---
-deployments:
-  - destination: /home/anan7947/repositories/lift_elevateur
-    repo: https://github.com/AzizVorrez/lift_elevateur.git
-    branch: master
-    environment:
-      PYTHONUNBUFFERED: 1
-      DJANGO_SETTINGS_MODULE: lift.settings
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/anan7947/repositories/lift_elevateur
+    - /bin/cp -R images $DEPLOYPATH
