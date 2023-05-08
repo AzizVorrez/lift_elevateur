@@ -4,3 +4,26 @@ deployment:
     - export DEPLOYPATH=/home/anan7947/repositories/lift_elevateur
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
+
+askip_files :
+  - __pycache__/passenger_wsgi.cpython-39.pyc
+  - applift/__pycache__/__init__.cpython-39.pyc
+  - applift/__pycache__/admin.cpython-39.pyc
+  - applift/__pycache__/apps.cpython-39.pyc
+  - applift/__pycache__/models.cpython-39.pyc
+  - applift/__pycache__/urls.cpython-39.pyc
+  - applift/__pycache__/views.cpython-39.pyc
+  - applift/migrations/__pycache__/0001_initial.cpython-39.pyc
+  - applift/migrations/__pycache__/0002_rename_keyword_keywords.cpython-39.pyc
+  - applift/migrations/__pycache__/__init__.cpython-39.pyc
+  - dist/lift_elevateur-1.0.tar.gz
+  - lift/__pycache__/__init__.cpython-39.pyc
+  - lift/__pycache__/settings.cpython-39.pyc
+  - lift/__pycache__/urls.cpython-39.pyc
+  - lift/__pycache__/wsgi.cpython-39.pyc
+  - lift_elevateur.egg-info/PKG-INFO
+  - lift_elevateur.egg-info/SOURCES.txt
+  - lift_elevateur.egg-info/dependency_links.txt
+  - lift_elevateur.egg-info/requires.txt
+  - lift_elevateur.egg-info/top_level.txt
+  - passenger_wsgi.py setup.py 
